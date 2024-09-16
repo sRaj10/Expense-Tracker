@@ -25,5 +25,11 @@
   },
   "devDependencies": {
     "tailwindcss": "^3.4.7"
-  }
+  },
+
+  "build": "npm run generate-html && vite build",
+"generate-html": "mkdir -p dist && cp index.html dist/"
+
+  
 }
+

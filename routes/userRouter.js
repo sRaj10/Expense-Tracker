@@ -61,7 +61,7 @@ router.post('/login',async (req,res)=>{
                 },process.env.JWT_KEY)
                 res.cookie('token',token)
                 let expenses = await expenseModel.find({ _id: { $in: user.expenses } });
-           
+                
                 res.render('expenseTrack',{expenses})
 
                 
